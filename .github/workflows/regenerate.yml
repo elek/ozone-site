@@ -26,7 +26,8 @@ jobs:
         uses: actions/checkout@v2
       - name: Checkout branch with rendered version
         uses: actions/checkout@v2
-        path: public
+        with:
+          path: public
       - name: Regenerate site
         run: hugo
       - name: Commit changes
